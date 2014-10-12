@@ -19,7 +19,6 @@ angular.module('storeApp').controller('storeCrtl', function ($scope, ProductServ
             category: productCategory,
             price: productPrice
         };
-        $scope.products.push(newProduct);
 
         ProductService.addProduct(newProduct).then(function (result) {
             $scope.products = result.data;
