@@ -17,3 +17,5 @@ angular.module('storeApp').filter('categories', function () {
         };
     }
 );
+
+angular.module('storeApp').constant('ProductServiceUrl', 'http://localhost:3000/products');
