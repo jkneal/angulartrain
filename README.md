@@ -6,4 +6,6 @@
 * Next, run the command 'node server/server.js’
 * Open a browser to the URL http://localhost:3000/app.html 
 
+See https://github.com/jkneal/angulartrain/wiki for the exercise instructions
+
 > You may also wish to install the Angular Batarang extension from the Chrome Web Store
