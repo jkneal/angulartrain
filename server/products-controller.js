@@ -21,13 +21,13 @@ module.exports = function(app) {
     });
 
     app.post('/products', function(req, res) {
-        console.log('add new product on server: ' + req.body);
+        console.log('add new product on server: ' + JSON.stringify(req.body));
         products.push(req.body);
         res.json(products);
     });
 
     app.post('/products/remove', function(req, res) {
-        console.log('deleting product with index: ' + req.body.index);
+        console.log('deleting product on server with index: ' + req.body.index);
         products.splice(req.body.index, 1);
         res.json(products);
     });
