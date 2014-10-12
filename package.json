@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jkneal/angulartrain",
   "dependencies": {
+    "body-parser": "^1.9.0",
     "express": "^4.9.7"
   }
 }
