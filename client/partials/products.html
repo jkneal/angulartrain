@@ -2,11 +2,11 @@
 
 <table class="table">
     <thead>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Category</th>
-        <th>Price</th>
-        <th></th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th></th>
     </thead>
 
     <tr ng-repeat="product in products">
@@ -31,4 +31,4 @@
     <label>Product Price</label><input class="form-control" ng-model="productPrice"/>
 </div>
 
-<button class="btn btn-primary" ng-click="addProduct(productName, productDescription, productCategory, productPrice)">add</button>
+<button class="btn btn-primary" ng-click="addProduct()">add</button>

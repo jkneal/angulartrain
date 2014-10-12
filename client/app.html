@@ -12,11 +12,6 @@
         <h1>{{name}}</h1>
         <address>{{address}}</address>
         <span class="label label-default">{{getStatus()}}</span>
-
-        <a href="" ng-click="status = 'Closed'" ng-show="status == 'Open'">close</a>
-        <a href="" ng-click="status = 'Open'" ng-show="status == 'Closed'">open</a>
-
-        <div ng-include="'partials/products.html'" ng-if="status == 'Open'"></div>
     </div>
 
     <script src="scripts/lib/angular.js"></script>
