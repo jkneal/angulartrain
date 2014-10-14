@@ -16,12 +16,11 @@
         <a href="" ng-click="status = 'Closed'" ng-show="status == 'Open'">close</a>
         <a href="" ng-click="status = 'Open'" ng-show="status == 'Closed'">open</a>
 
-        <cart class="pull-right" item-id="'name'" checkout-path="/checkout"></cart>
-
-        <div ng-include="'partials/products.html'" ng-if="status == 'Open'"></div>
+        <div ng-view></div>
     </div>
 
     <script src="scripts/lib/angular.js"></script>
+    <script src="scripts/lib/angular-route.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/store-controller.js"></script>
     <script src="scripts/services/product-service.js"></script>

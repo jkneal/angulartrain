@@ -1,4 +1,16 @@
-angular.module('storeApp', []);
+angular.module('storeApp', ['ngRoute']);
+
+angular.module('storeApp').config(function ($routeProvider) {
+    $routeProvider .when('/home', {
+        templateUrl: 'partials/home.html'
+    }).when('/add', {
+        templateUrl: 'partials/add-product.html'
+    }).when('/checkout', {
+        templateUrl: 'partials/checkout.html'
+    }).otherwise({
+        redirectTo: '/home'
+    });
+});
 
 angular.module('storeApp').filter('categories', function () {
         return function (items) {

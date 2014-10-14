@@ -27,17 +27,6 @@
     </tr>
 </table>
 
-<h2>Add Product</h2>
+<a ng-href="#/add">add new product</a>
 
-<div class="form-group">
-    <div class="alert alert-success" ng-show="productAdded">Product was successfully added!
-        <button class="close" data-dismiss="alert" ng-click="productAdded=false"><span>&times;</span></button>
-    </div>
 
-    <label>Product Name</label><input class="form-control" ng-model="productName"/>
-    <label>Product Description</label><input class="form-control" ng-model="productDescription"/>
-    <label>Product Category</label><input class="form-control" ng-model="productCategory"/>
-    <label>Product Price</label><input class="form-control" ng-model="productPrice"/>
-</div>
-
-<button class="btn btn-primary" ng-click="addProduct(productName, productDescription, productCategory, productPrice)">add</button>
