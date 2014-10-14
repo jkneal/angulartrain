@@ -1,4 +1,4 @@
-angular.module('storeApp').controller('storeCrtl', function ($scope, ProductService) {
+angular.module('storeApp').controller('storeCrtl', function ($scope, ProductService, $rootScope) {
     $scope.name = 'Joe\'s Sports Store';
     $scope.address = '5100 51st Chicago, IL';
     $scope.status = 'Open';
@@ -32,5 +32,5 @@ angular.module('storeApp').controller('storeCrtl', function ($scope, ProductServ
         ProductService.removeProduct(index).then(function (result) {
             $scope.products = result.data;
         });
-    }
+    };
 });
