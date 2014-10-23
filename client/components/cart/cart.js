@@ -26,20 +26,9 @@ angular.module('storeApp').directive('cart', function () {
 
             $rootScope.addToCart = function (item) {
                 $scope.items.push(item);
+                item.inCart = true;
                 updateTotals();
             };
-
-            $rootScope.inCart = function (item) {
-                angular.forEach($scope.items, function (cartItem) {
-                    if ($scope.itemId) {
-                        if (cartItem[$scope.itemId] == item[$scope.itemId]) {
-                            return true;
-                        }
-                    }
-                });
-
-                return false;
-            }
         }
     };
 });
