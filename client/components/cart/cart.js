@@ -3,19 +3,17 @@ angular.module('storeApp').directive('cart', function () {
         restrict: 'E',
         replace: true,
         scope: {
-            itemId: '@',
             checkoutPath: '@'
         },
         templateUrl: 'components/cart/cart.html',
-        controller: function ($scope, $rootScope) {
-            $scope.items = [];
+        controller: function ($scope) {
             $scope.count = 0;
             $scope.total = 0;
 
-            function updateTotals() {
+            function updateTotals(event, items) {
                 var count = 0;
                 var total = 0;
-                angular.forEach($scope.items, function (item) {
+                angular.forEach(items, function (item) {
                     count++;
                     total += Number(item.price);
                 });
@@ -24,11 +22,7 @@ angular.module('storeApp').directive('cart', function () {
                 $scope.total = total;
             };
 
-            $rootScope.addToCart = function (item) {
-                $scope.items.push(item);
-                item.inCart = true;
-                updateTotals();
-            };
+            $scope.$on('cartItemAdded', updateTotals);
         }
     };
 });
